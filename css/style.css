@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+
+
+img{
+    width: 600px;
+    height: auto;
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+}
+
+
+
+/* .slideshow {
+    height: 520px;
+    width: 100%;
+    position: relative;
+    
+} */
+
+.slider {
+    margin: 0 auto;
+    width: 80%;
+    padding-left: 0px !important;
+}
+
+.slider img {
+    margin: 0 auto;
+    width: 100%;
+    height: 35vw;
+    object-fit: contain;
+    position:relative;
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: black !important;
+}
+
+nav{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color:aqua ;
+    width: 100%;
+    height: 60px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+
+
+.menu{
+    padding-left: 10px;
+}
+
+.sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    z-index: 100;
+}
+
+.tabber-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    height: 60px;
+    width: 100%;
+}
+
+.tabber-menu{
+    color: white;
+    padding-left: 10px;
+}
+
+.tab-link{
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    width: 100%;
+    height: calc(100% - 220px);
+}
+
+#tab1{
+    height: 400px;
+    position: relative;
+}
+
+#tab1::before{
+    background-color: rgba(0,0, 0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+}
+
+
+.news-li{
+    color: white;;
+}
+
+.news-logo{
+    color: white;
+}
+
+#tab2{
+    height: 400px;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+#tab2 img{
+    margin-top: 30px;
+}
+
+.img{
+    text-align: center;
+}
+
+
+.box{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+#tab3{
+    height: 400px;
+    width: 100%;
+}
+
+.section3{
+    height: 400px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+}
+
+.tosidai{
+    height: 240px;
+    width: 240px;
+    margin-top: 50px;
+}
+
+.toukou{
+    height: 340px;
+    width: 240px;
+}
+
+.game{
+    margin-top: 150px;
+    display: block;
+    text-align: center;
+    line-height: 10px;
+}
+
+.vs{
+    padding-bottom: 50px;
+}
+
+.daigakumei{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tab2,#tab3{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: aqua;
+}
+
+
+.footer-ul{
+    margin: 0;
+}
+
+.footer-li{
+    font-size: 15px;
+}
+
+.footer-logo{
+ text-align: center;
+}
+
+
+
+
+
+
+

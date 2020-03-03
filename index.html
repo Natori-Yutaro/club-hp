@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <title>都市大サッカー部HP</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="./badge05.jpg" alt="エンブレム">
+        <div>
+            <h1>TOKYO CITY UNIVA FOOTBALL CLAB</h1>
+            <h2>東京都市大学体育会サッカー部</h2>
+        </div>
+    </header>
+
+
+
+    <nav>
+        <p class="menu">MENU</p>
+        <ul>
+            <li><a class="nav-link" href="#">Menber</a></li>　　　
+            <li><a class="nav-link" href="#">Result</a></li>
+            <li><a class="nav-link" href="#">Goal</a></li>
+            <li><a class="nav-link" href="#">Acusses</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="slideshow">
+        <ul class="slider">
+            <li class="slide"><a href="#"><img src="./IMG_3483.JPG" alt="image01"></a></li>
+            <li class="slide"><a href="#"><img src="./IMG_3484.JPG" alt="image02"></a></li>
+            <li class="slide"><a href="#"><img src="./IMG_3485.JPG" alt="image03"></a></li>
+            <li class="slide"><a href="#"><img src="./IMG_3486.JPG" alt="image04"></a></li>
+
+        </ul>
+    </div>
+
+    <div class="tabber">
+        <div class="tabber-nav">
+            <p class="tabber-menu">INTRO</p>
+            <ul>
+                <li class="tab-list"><a class="tab-link" href="#tab1">News</a></li>
+                <li class="tab-list"><a class="tab-link" href="#tab2">Standing-table</a></li>
+                <li class="tab-list"><a class="tab-link" href="#tab3">Next-Game-informetion</a></li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <article>
+                <section id="tab1">
+                    <div class="news">
+                        <div class="box">
+                            <p class="news-logo">NEWS</p>
+                            <ul　class="news-ul">
+                                <li class="news-li">11月3日　東京都大会開幕！！　vs東京都1部　４位のチーム</li>
+                                <li class="news-li">10月20日　リーグ戦最終節！　vs東京工業大学</li>
+                                <li class="news-li">10月13日　リーグ戦最終節　台風の為、延期</li>
+                                <li class="news-li">10月6日　リーグ戦17節！　vs創価大学</li>
+                                <li class="news-li">9月30日　リーグ戦16節！　vs武蔵野大学</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="tab2">
+                    <div class="img">
+                        <img src="./スクリーンショット (4).png" alt="成績表">
+                    </div>
+                </section>
+                <section id="tab3">
+                    <div class="section3">
+                        <p class="daigakumei">東京都市大学</p>
+                        <img class="tosidai" src="./badge05.jpg" alt="エンブレム">
+                        <div class="game">
+                            <p class="vs">vs</p>
+                            <p>10時　Kickoff</p>
+                            <p>＠武蔵大学朝霞キャンパス</p>
+                        </div>
+                        <img class="toukou" src="./logo2.png" alt="相手エンブレム">
+                        <p class="daigakumei">東京工業大学</p>
+                    </div>
+                </section>
+            </article>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <ul class="footer-ul">
+            <li class="footer-li">OB・OG情報</li>
+            <li class="footer-li">学生スタッフ募集</li>
+            <li class="footer-li">入部希望者へ</li>
+            <li class="footer-li">活動報告</li>
+            <li class="footer-li">お問い合わせ</li>
+        </ul>
+        <p class="footer-logo">東京都市大学体育会サッカー部</p>
+
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script>
+        $(function ()
+        {
+            var $navOffsettop = $("nav").offset().top;
+            console.log($navOffsettop);
+
+            var $tabber = $(".tabber")
+            let href;
+
+
+            $(window).on("scroll", function ()
+            {
+                if ($(this).scrollTop() > $navOffsettop) {
+                    $("nav").addClass("sticky");
+                } else {
+                    $("nav").removeClass("sticky");
+                }
+
+                if ($(this).scrollTop() > $navOffsettop) {
+                    $(".nav-link").addClass("sticky");
+                } else {
+                    $(".nav-link").removeClass("sticky");
+                }
+            });
+
+            $(".tab-list").click(function (event)
+            {
+                event.preventDefault();
+                href = $(this).find("a").attr("href");
+                $("section").stop(true).fadeOut();
+                setTimeout(function ()
+                {
+                    $(href).stop(true).fadeIn()
+                }, 400);
+            });
+
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                adaptiveHeight: true,
+            });
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
